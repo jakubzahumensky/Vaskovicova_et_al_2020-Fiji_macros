@@ -3,10 +3,10 @@
 // masks are then applied to the original non-processed fl. channel for intensity analysis
 
 // set lower circularity (c) and area (S) limit; select slice (s) and fl. channel (F) to measure intensity
-   c=0.5;
-   S=1;
-   s=9;
-   F=1;
+   c = 0.5;
+   S = 1;
+   s = 9;
+   F = 1;
    title = getTitle();
    path = getDirectory("image");
    run("Clear Results");
