@@ -4,9 +4,9 @@
 // without z-stack preprocessing, the resulting sizes will be undervalued
 
 // set lower circularity (c) and area (S) limit; select fluorescence channel (F)
-   c=0.5;
-   S=1;
-   F=1;
+   c = 0.5;
+   S = 1;
+   F = 1;
    run("Clear Results");
 
    title = getTitle();
@@ -40,12 +40,13 @@
    roiManager("Measure");
 
 // saving results, outlines and masks
-   saveAs("Results", path+title+"-vac_size+intensity.csv");
-   selectWindow("Drawing of Mask of "+title2);
-   saveAs("PNG",path+title+"-bounds");
+   saveAs("Results", path + title + "-vac_size+intensity.csv");
+   selectWindow("Drawing of Mask of " + title2);
+   saveAs("PNG",path + title + "-bounds");
    close();
    close(title2);
-   close("Mask of "+title2);
+   close("Mask of " + title2);
+
  // composite brightfield+fl. channel image is created; vacuoles are displayed in red - helps eliminate data petraining to dead cells
    open(path+title);   
    selectWindow(title);
